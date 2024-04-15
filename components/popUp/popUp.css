@@ -66,9 +66,9 @@
   --popup-default-animation: none;
 }
 
-/* Modal Opacity */
+/* Modal background Opacity */
 #popup {
-  --popup-default-opacity: 0.65;
+  --popup-default-opacity: hsl(210, 8%,25%);
 }
 
 /* Modal Radius */
@@ -99,7 +99,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, var(--popup-default-opacity));
+  background-color: var(--popup-default-opacity);
   z-index: 1000;
   overflow: auto;
   transition-timing-function: ease-in-out;
