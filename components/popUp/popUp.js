@@ -77,7 +77,7 @@ function addPopup() {
   <div class="popup-body">
     <div class="popup-content">
       <div class="popup-exit-btn">
-        <span id="closePopup">X</span>
+        X
       </div>
       <div class="popup-row">
         <div class="popup-image">
