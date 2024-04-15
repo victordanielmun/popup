@@ -76,7 +76,7 @@ function addPopup() {
   aside.innerHTML = `
   <div class="popup-body">
     <div class="popup-content">
-      <div class="popup-exit-btn">
+      <div class="popup-exit-btn" id="closePopup">
         X
       </div>
       <div class="popup-row">
