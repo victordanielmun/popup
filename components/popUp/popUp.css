@@ -39,6 +39,8 @@
   --popup-button-hover-font-color: #ffffff;
   --popup-button-clic-color: #1A1A1A;
   --popup-button-clic-font-color: #ffffff;
+  --popup-button-close-color: #071C2E;
+  --popup-button-close-hover-color: #1A1A1A;
 }
 
 /* Modal Sizes */
@@ -275,6 +277,7 @@
   font-weight: 900;
   font-family: var(--popup-close-button-font);
   min-width: 137px;
+  transition: color 0.3s ease-in-out;
 }
 
 .popup-button:hover {
@@ -286,35 +289,33 @@
 }
 
 .popup-exit-btn {
-  background-color: var(--popup-bg-icon-color);
-  position: absolute;
+  background-color: var(--popup-button-close-color);
+  position: fixed;
   top: 0;
   right: 0;
   margin: 1rem 1.5rem 0 0;
-  color: var(--popup-button-font-color);
+  padding: 0;
+  color: var(--popup-button-close-color);
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
   width: 25px;
   height: 25px;
   border-radius: 50%;
   z-index: 100;
   box-shadow: var(--popup-default-box-shadow);
-}
-
-.popup-exit-btn span {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  line-height: 50px;
   font-size: var(--popup-close-button-font-size);
   color: var(--popup-button-font-color);
   font-weight: bold;
   font-family: var(--popup-close-button-font);
+  transition: color 0.3s ease-in-out;
+}
+
+.popup-exit-btn:hover {
+  background-color: var(--popup-button-close-hover-color);
+  transform: scale(1.02);
 }
 
 /* Breakpoint for resolution less than 640px */
