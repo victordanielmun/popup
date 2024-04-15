@@ -110,9 +110,9 @@
 
 .popup-body {
   position: absolute;
-  left: 50%;
+  left: var(--popup-default-left);
   top: var(--popup-default-top);
-  transform: translate(-50%, -50%);
+  transform: var(--popup-default-transform);
   background-color: var(--popup-bg-color);
   max-width: var(--popup-max-width);
   min-width: var(--popup-min-width);
