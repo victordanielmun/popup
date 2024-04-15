@@ -35,10 +35,10 @@
   --popup-hr-color: #14599d;
   --popup-button-font-color: #ffffff;
   --popup-button-border-color: #071c2e;
-  --popup-button-hover-color: #fff;
-  --popup-button-hover-font-color: #1a1a1a;
-  --popup-button-focus-color: #fff;
-  --popup-button-focus-font-color: #1a1a1a;
+  --popup-button-hover-color: #071C2E;
+  --popup-button-hover-font-color: #ffffff;
+  --popup-button-clic-color: #1A1A1A;
+  --popup-button-clic-font-color: #ffffff;
 }
 
 /* Modal Sizes */
@@ -216,9 +216,11 @@
 }
 
 .popup-text hr:first-child {
-  width: 174px;
+  width: 80%;
   height: 2px;
-  border-top: 2px solid var(--popup-hr-color);
+  background-color: var(--popup-hr-color);
+  border: none;
+
 }
 
 #popup-text-price {
@@ -226,12 +228,15 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  width: 80%;
 }
 
 #popup-text-price hr {
-  width: 55px;
+  width: 60%;
   height: 2px;
-  border-top: 2px solid var(--popup-hr-color);
+  background-color: var(--popup-hr-color);
+  border: none;
+
 }
 
 .popup-text-container h3 {
@@ -262,12 +267,22 @@
   cursor: pointer;
   background-color: var(--popup-button-color);
   color: var(--popup-button-font-color);
+  text-decoration: none;
+  text-align: center;
   border: 2px solid var(--popup-button-border-color);
   border-radius: 10px;
   font-size: var(--popup-button-font-size);
   font-weight: 900;
   font-family: var(--popup-close-button-font);
   min-width: 137px;
+}
+
+.popup-button:hover {
+  background-color: var(--popup-button-hover-color);
+}
+
+.popup-button:active {
+  background-color: var(--popup-button-clic-color);
 }
 
 .popup-exit-btn {
@@ -310,8 +325,12 @@
 
   #popup-text-price hr {
     width: 100%;
-    height: 2px;
-    border-top: 2px solid var(--popup-hr-color);
+    
+   
+  }
+
+  #popup-text-price hr {
+    width:30%;
   }
 }
 
@@ -324,8 +343,6 @@
 
   #popup-text-price hr {
     width: 100%;
-    height: 2px;
-    border-top: 2px solid var(--popup-hr-color);
   }
 
   .popup-text-container h2 {
@@ -344,8 +361,6 @@
 
   .popup-text hr:first-child {
     width: 80%;
-    height: 2px;
-    border-top: 2px solid var(--popup-hr-color);
   }
 
   .exit-btn span {
