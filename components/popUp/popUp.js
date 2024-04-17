@@ -35,7 +35,7 @@
 
   /** Function that when loading the page validates if the resolution
    *  is greater than 960px and adds the mouseout event to activate
-   * the function removeEventListene once if the mouse leaves the page
+   * the function popUphandler once if the mouse leaves the page
    * or if the resolution is less than 960px call the PopUp once after a delay */
 
   window.addEventListener("load", function () {
@@ -72,23 +72,32 @@ function addPopup() {
   // Destination URL for the link
   const linkUrl = "https://www.example.com";
 
+  // Image URL for Pop up
+  const imageUrl = "assets/img/popUp/girl in ipad 1.png";
+
+  // Image banner URL for Pop up
+  const imageBannerUrl = "assets/img/popUp/logoB.svg";
+
+  // Text for CTA Button
+  const textCtaButton = "Subscribe!";
+
   //Create the internal structure of the popup
   aside.innerHTML = `
   <div class="popup-body">
     <div class="popup-content">
       <div class="popup-exit-btn" id="closePopup">
-        X
+      <span>X</span>
       </div>
       <div class="popup-row">
         <div class="popup-image">
           <div class="popup-img-container">
             <img 
-              src="assets/img/popUp/girl in ipad 1.png" 
+              src="${imageUrl}" 
               alt="popup-image" 
             />
             <div class="popup-img-banner">
               <img
-                src="assets/img/popUp/logoB.svg"
+                src="${imageBannerUrl}"
                 alt="popup-image-banner"
               />
             </div>
@@ -101,10 +110,14 @@ function addPopup() {
             <h2>Britannica Premium</h2>
             <div id="popup-text-price">
               <hr>
+              <div>
               <h3>FOR $10</h3>
+              </div>
               <hr>
             </div>
-            <a href="${linkUrl}" target="_blank" class="popup-button">Subscribe!</a>
+            <a href="${linkUrl}" target="_blank" class="popup-button">
+            ${textCtaButton}
+            </a>
           </div>
         </div>
       </div>
@@ -121,3 +134,4 @@ function addPopup() {
     });
   
 }
+
